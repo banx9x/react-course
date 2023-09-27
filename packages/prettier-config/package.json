@@ -1,0 +1,12 @@
+{
+  "name": "@react-course/prettier-config",
+  "version": "1.0.0",
+  "description": "Shared Prettier Config",
+  "main": "index.json",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

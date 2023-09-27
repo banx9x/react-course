@@ -1,0 +1,13 @@
+{
+    "name": "react-course",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "dev:ecommerce": "lerna run dev --scope ecommerce"
+    },
+    "devDependencies": {
+        "lerna": "^7.3.0"
+    }
+}
