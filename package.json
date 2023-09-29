@@ -1,13 +1,15 @@
 {
-    "name": "react-course",
-    "private": true,
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "dev:ecommerce": "lerna run dev --scope ecommerce"
-    },
-    "devDependencies": {
-        "lerna": "^7.3.0"
-    }
+  "name": "react-course",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:ecommerce": "lerna run dev --scope ecommerce",
+    "dev:rawg.io": "lerna run dev --scope rawg.io"
+  },
+  "devDependencies": {
+    "lerna": "^7.3.0"
+  },
+  "prettier": "@react-course/prettier-config"
 }
