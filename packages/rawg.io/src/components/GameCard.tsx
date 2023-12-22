@@ -12,10 +12,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { format } from 'date-fns';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { platforms } from '../lib/platforms';
 import { GameData, ShortScreenshot } from '../services/game.services';
-import { Link as RouterLink } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -85,8 +85,6 @@ type GameCardProps = {
 };
 
 const GameCard = ({ data }: GameCardProps) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
     <Box
       rounded={'lg'}

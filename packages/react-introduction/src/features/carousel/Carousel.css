@@ -1,0 +1,98 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item-content {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-item-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carousel-item-description {
+  font-size: 18px;
+}
+
+.carousel-pagination {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-pagination-item {
+  width: 30px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.carousel-pagination-item.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-navigation .carousel-navigation-prev,
+.carousel-navigation .carousel-navigation-next {
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carousel-navigation .carousel-navigation-prev:hover,
+.carousel-navigation .carousel-navigation-next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-navigation .carousel-navigation-prev.disabled,
+.carousel-navigation .carousel-navigation-next.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

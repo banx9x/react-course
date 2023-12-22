@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Button, Flex, Container } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 export default function NotFound() {

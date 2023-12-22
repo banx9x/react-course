@@ -1,32 +1,24 @@
 import {
   Box,
   Button,
-  Card,
   Flex,
   Grid,
   GridItem,
-  Image,
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
+import { useEffect, useRef, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import GameCard from '../components/GameCard';
 import { PageHeading } from '../components/PageHeading';
 import {
   QueryGameResponse,
   Result,
   getTrending,
 } from '../services/game.services';
-import { useLoaderData } from 'react-router-dom';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import GameCard from '../components/GameCard';
-import { useEffect, useRef, useState } from 'react';
-
-export async function loader() {
-  const data = await getTrending();
-  return data;
-}
 
 const Home = () => {
-  const [data, setData] = useState<QueryGameResponse>({});
+  const [data, setData] = useState<QueryGameResponse>();
   const [isLoading, setIsLoading] = useState(true);
   const columns = useBreakpointValue(
     {
@@ -73,7 +65,9 @@ const Home = () => {
 
       <Box as={'section'}>
         {isLoading ? (
-          <div>Loading...</div>
+          <Box>Loading...</Box>
+        ) : !data ? (
+          <Box>Something wrong :(</Box>
         ) : (
           <InfiniteScroll
             dataLength={data.results.length}
@@ -82,7 +76,9 @@ const Home = () => {
               getTrending({ page: pageRef.current }).then((data) => {
                 setData((prev) => ({
                   ...data,
-                  results: [...prev.results, ...data.results],
+                  results: prev
+                    ? [...prev.results, ...data.results]
+                    : [...data.results],
                 }));
               });
             }}

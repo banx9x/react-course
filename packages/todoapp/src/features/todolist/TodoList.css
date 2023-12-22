@@ -1,0 +1,8 @@
+.todo-list {
+  padding: 10px;
+  border: 1px solid rgba(118, 154, 255, 0.3);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

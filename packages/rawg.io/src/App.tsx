@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import Root from './routes/Root';
 import theme from './config/theme';
-import Home, { loader as homeLoader } from './routes/Home';
+import Home from './routes/Home';
 import NotFound from './routes/404';
 
 const router = createBrowserRouter([

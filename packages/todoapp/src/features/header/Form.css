@@ -1,0 +1,21 @@
+.form {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(118, 154, 255, 0.3);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.content::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.content:focus {
+  outline: none;
+  border: 1px solid rgb(118, 154, 255);
+  box-shadow: 0 0 0 1px rgb(118, 154, 255);
+}
